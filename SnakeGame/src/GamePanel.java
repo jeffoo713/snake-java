@@ -91,7 +91,11 @@ public class GamePanel extends JPanel implements ActionListener{
 		}
 	}
 	public void checkApple() {
-		
+		if ((appleX == x[0]) && (appleY == y[0])) {
+			bodyParts++;
+			applesEaten++;
+			newApple();
+		}
 	}
 	public void checkCollisions() {
 		// snake hits the body
